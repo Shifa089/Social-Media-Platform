@@ -1,8 +1,14 @@
 package com.social.media.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Post {
 
     @Id
@@ -10,6 +16,5 @@ public class Post {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "social_user_id")
     private SocialUser socialUser;
 }
