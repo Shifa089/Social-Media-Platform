@@ -55,6 +55,13 @@ public class DataInitializer {
             SocialGroup group1 = new SocialGroup();
             SocialGroup group2 = new SocialGroup();
 
+            // Add users to groups
+            group1.getSocialUsers().add(user1);
+            group1.getSocialUsers().add(user2);
+
+            group2.getSocialUsers().add(user2);
+            group2.getSocialUsers().add(user3);
+
             // Save groups to the database
             groupRepository.save(group1);
             groupRepository.save(group2);
